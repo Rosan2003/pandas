@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 animal,age,visits,priority
 cat,2.5,1.0,True
 cat,3.0,3.0,True
@@ -9,3 +10,16 @@ python,4.5,1.0,False
 cat,,1.0,True
 dog,7.0,2.0,False
 dog,3.0,1.0,False
+=======
+animal,age,visits,priority
+cat,2.5,1.0,True
+cat,3.0,3.0,True
+python,0.5,2.0,False
+dog,,3.0,True
+dog,5.0,2.0,False
+cat,1.5,3.0,False
+python,4.5,1.0,False
+cat,,1.0,True
+dog,7.0,2.0,False
+dog,3.0,1.0,False
+>>>>>>> c220179 (just few changes)
