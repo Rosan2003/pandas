@@ -11,12 +11,12 @@ def recommend_players(target_player, top_n=5):
 
     df = pd.read_csv('./data.csv')
 
-    target_vector = np.array([target_player['age'], target_player['rating']])
+    target_vector = np.array([target_player['age'], target_player['rating'], target_player['gender']])
     
     similarity_scores = []
 
     for _, row in df.iterrows():
-        player_vector = np.array([row['age'], row['rating']])
+        player_vector = np.array([row['age'], row['rating'], row['gender']])
         similarity = cosine_similarity(target_vector, player_vector)
         similarity_scores.append((row['name'], similarity))
     
@@ -25,7 +25,7 @@ def recommend_players(target_player, top_n=5):
     return similarity_scores[:top_n]
 
 
-target_player = {"age": 19, "rating": 2.8}
+target_player = {"age": 20, "rating": 2.8, "gender":2}
 
 
 top_similar_players = recommend_players(target_player, top_n=5)
